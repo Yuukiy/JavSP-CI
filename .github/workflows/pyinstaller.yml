@@ -37,7 +37,7 @@ jobs:
           pip install pyinstaller
           
       - name: Build with PyInstaller for windows
-        run: make.bat
+        run: cmd.exe /c 'make.bat'
       
       - name: Upload build artifact
         uses: actions/upload-artifact@v1
