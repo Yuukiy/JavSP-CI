@@ -24,7 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: git fetch --prune --unshallow --tags
+
+      - name: Fetch tags
+        run: git fetch --prune --unshallow --tags
 
       - name: Setup Python 3.8
         uses: actions/setup-python@v2
@@ -39,9 +41,6 @@ jobs:
 
       - name: Build with PyInstaller for windows
         run: cmd.exe /c 'make.bat'
-
-      - name: Check git version
-        run: git describe --tags
 
       - name: Set VERSION variable for windows
         run: |
