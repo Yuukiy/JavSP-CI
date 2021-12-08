@@ -24,6 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow --tags
 
       - name: Setup Python 3.8
         uses: actions/setup-python@v2
@@ -35,12 +36,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pyinstaller
-          
+
       - name: Build with PyInstaller for windows
         run: cmd.exe /c 'make.bat'
-      
+
+      - name: Check git version
+        run: git describe --tags
+
+      - name: Set VERSION variable for windows
+        run: |
+          echo "VERSION=$(python make\gen_ver_hook.py)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v1
         with:
-          name: JavSP-Windows-amd64
+          name: JavSP-${{ env.VERSION }}-Windows-amd64
           path: dist/JavSP.exe
