@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: PyInstaller
 
 # Controls when the workflow will run
 on:
@@ -42,5 +42,5 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-artifact@v1
         with:
-          name: JavSP-*-Windows-amd64.zip
-          path: dist
+          name: JavSP-Windows-amd64
+          path: dist/JavSP.exe
