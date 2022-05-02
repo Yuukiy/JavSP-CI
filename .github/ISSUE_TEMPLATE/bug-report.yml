@@ -25,22 +25,12 @@ body:
         - 不是，我是从源代码运行的
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: 日志
+      description: 请打开软件所在目录下的`JavSP.log`文件并将相关的内容粘贴到这里
+      render: log
   - type: checkboxes
     id: promise
     attributes:
