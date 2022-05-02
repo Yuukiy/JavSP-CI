@@ -1,5 +1,5 @@
-name: 报告问题(Bug)
-description: 报告你遇到的问题(Bug)
+name: 报告问题 (Bug)
+description: 报告你遇到的问题 (Bug)
 title: 用一句话描述这个问题
 labels: ["bug", "triage"]
 body:
