@@ -13,8 +13,8 @@ body:
       label: 问题详情
       description: 描述这个bug的出现场景、现象等
       placeholder: 如果这个问题只在部分影片上出现，必须附上这些影片的原始文件名或者番号
-      validations:
-        required: true
+    validations:
+      required: true
   - type: dropdown
     id: execute-method
     attributes:
@@ -31,8 +31,8 @@ body:
       options:
         - 是
         - 否
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: log
     attributes:
