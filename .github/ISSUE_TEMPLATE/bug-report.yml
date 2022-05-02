@@ -39,7 +39,7 @@ body:
     id: log
     attributes:
       label: 日志
-      description: 请将软件所在目录下的日志文件`JavSP.log`上传到这里 [图片](https://github.com/Yuukiy/JavSP/blob/master/image/javsp_logo.png?raw=true)
+      description: 请将软件所在目录下的日志文件`JavSP.log`上传到这里 ![image](https://user-images.githubusercontent.com/76897913/166197937-4c9f0b78-90a5-44db-98c8-fc7b701b1c83.png)
       placeholder: 你可以通过点击下面或者直接将文件拖动到这个输入框完成文件上传 [图片](https://github.com/Yuukiy/JavSP/blob/master/image/javsp_logo.png?raw=true)
   - type: textarea
     id: screenshot
