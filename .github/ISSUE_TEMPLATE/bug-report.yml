@@ -23,8 +23,8 @@ body:
       label: 运行方式
       description: 你运行的是打包后的exe程序吗？
       options:
-        - 是的，我是从exe运行的
-        - 不是，我是从源代码运行的
+        - 我运行的是打包后的exe程序
+        - 我是从源代码运行的
     validations:
       required: true
   - type: dropdown
