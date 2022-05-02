@@ -23,8 +23,6 @@ body:
       options:
         - 是的
         - 不是，我是从源代码运行的
-      validations:
-        required: true
   - type: dropdown
     id: proxy
     attributes:
