@@ -1,39 +1,28 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
+name: 报告问题(Bug)
+description: 报告你遇到的问题(Bug)
+title: "用一句话描述这个问题"
 labels: ["bug", "triage"]
-assignees:
-  - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+        为了方便复现和排查问题，请按照下面的提示补充问题详情
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: 问题详情
+      description: 描述这个bug的出现场景、现象等
+      placeholder: 如果这个问题只在部分影片上出现，必须附上这些影片的原始文件名或者番号
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: execute-method
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: 运行方式
+      description: 你运行的是打包后的exe程序吗？
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 是的
+        - 不是，我是从源代码运行的
     validations:
       required: true
   - type: dropdown
@@ -53,10 +42,10 @@ body:
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: checkboxes
-    id: terms
+    id: promise
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: 提交须知
+      description: 提交问题前，请确认你使用的是[最新版本](https://github.com/Yuukiy/JavSP/releases/latest)并且已经阅读过[Wiki帮助文档](https://github.com/Yuukiy/JavSP/wiki)
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: 我确认使用的是最新版本并且阅读过Wiki帮助文档
           required: true
