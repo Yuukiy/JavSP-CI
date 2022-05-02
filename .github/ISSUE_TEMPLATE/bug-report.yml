@@ -12,7 +12,9 @@ body:
     attributes:
       label: 问题详情
       description: 描述这个bug的出现场景、现象等
-      placeholder: 如果这个问题只在部分影片上出现，必须说明这些影片的原始文件名或者番号
+      placeholder: |
+        - 如果这个问题只在使用特定的配置项时出现，请附上你的相关的配置项。
+        - 如果这个问题只在部分影片上出现，必须说明这些影片的完整文件名或者番号。
     validations:
       required: true
   - type: dropdown
