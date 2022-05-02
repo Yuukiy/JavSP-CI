@@ -40,7 +40,7 @@ body:
     attributes:
       label: 日志
       description: 请将软件所在目录下的日志文件`JavSP.log`上传到这里
-      placeholder: 你可以直接将文件拖动到当前输入框或者点击下面的`Attach files by dragging & dropping, selecting or pasting them.`上传文件
+      placeholder: 你可以直接将文件拖动到当前输入框或者点击下面的“Attach files by dragging & dropping, selecting or pasting them.”上传文件
   - type: textarea
     id: screenshot
     attributes:
