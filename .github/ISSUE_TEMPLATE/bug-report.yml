@@ -13,10 +13,9 @@ body:
       label: 问题详情
       description: 描述这个bug的出现场景、现象等
       placeholder: |
-    ### Heading
-
-    * Bullet
-    * Points
+        ### Heading
+        * Bullet
+        * Points
         - 如果这个问题只在使用特定的配置项时出现，请附上你配置文件中的相关项。
         - 如果这个问题只在部分影片上出现，必须说明这些影片的完整文件名或者番号。
     validations:
