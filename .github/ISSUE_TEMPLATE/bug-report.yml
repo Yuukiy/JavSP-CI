@@ -33,8 +33,8 @@ body:
       options:
         - 是
         - 否
-    validations:
-      required: true
+      validations:
+        required: true
   - type: textarea
     id: log
     attributes:
@@ -45,7 +45,7 @@ body:
     id: screenshot
     attributes:
       label: 运行截图（可选）
-      description: 添加截图可能有助于定位和排查问题
+      description: 添加截图有助于定位和排查问题
       placeholder: 你可以按`Ctrl+V`快速上传剪贴板中的截图，或者参考日志的上传方法上传图片
   - type: checkboxes
     id: promise
