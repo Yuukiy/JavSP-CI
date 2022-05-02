@@ -1,6 +1,5 @@
 name: 报告问题(Bug)
 description: 报告你遇到的问题(Bug)
-title: "用一句话描述这个问题"
 labels: ["bug", "triage"]
 body:
   - type: markdown
@@ -23,14 +22,28 @@ body:
       options:
         - 是的
         - 不是，我是从源代码运行的
+  - type: dropdown
+    id: proxy
+    attributes:
+      label: 代理
+      description: 是否启用了网络代理？
+      options:
+        - 是
+        - 否
     validations:
       required: true
   - type: textarea
-    id: logs
+    id: log
     attributes:
       label: 日志
-      description: 请打开软件所在目录下的`JavSP.log`文件并将相关的内容粘贴到这里
-      render: log
+      description: 请将软件所在目录下的日志文件`JavSP.log`上传到这里
+      placeholder: 你可以通过点击下面或者直接将文件拖动到这个输入框完成文件上传
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 运行截图（可选）
+      description: 添加截图可能有助于定位和排查问题
+      placeholder: 你可以按`Ctrl+V`快速上传剪贴板中的截图，或者参考日志的上传方法上传图片
   - type: checkboxes
     id: promise
     attributes:
